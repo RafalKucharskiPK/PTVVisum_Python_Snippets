@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			body{
+				margin: 0;
+			}
+		</style>
+		<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+    	<script src="http://api.maps.yahoo.com/ajaxymap?v=3.8&appid=euzuro-openlayers"></script>
+		<script src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3"></script>
+		<script src="http://openlayers.org/dev/OpenLayers.js"></script>
+		<script type="text/javascript">
+		var map;
+		var x0, y0, x1, y1;
+		var width, height;
+		var value;
+		var real_bound;
+		function setSize(){
+			dim = document.getElementById("map");
+			dim.style.width = width + "px";
+			dim.style.height = height + "px";
+			init();
+		}
+		function init(){
+			var gmap;
+			var proj = new OpenLayers.Projection("EPSG:4326");
+			OpenLayers.IMAGE_RELOAD_ATTEMPTS = 3;
+            map = new OpenLayers.Map(document.getElementById("map"), {
+                controls: [],
+				numZoomLevels: 30
+            });
+			switch (value){
+				case 0: gmap = new OpenLayers.Layer.Google("Google Roadmap");
+					break;
+				case 1: gmap = new OpenLayers.Layer.Google("Google Terrain", {type: google.maps.MapTypeId.TERRAIN});
+					break;
+				case 2: gmap = new OpenLayers.Layer.Google("Google Satellite", {type: google.maps.MapTypeId.SATELLITE});
+					break;
+				case 3: gmap = new OpenLayers.Layer.Google("Google Hybrid", {type: google.maps.MapTypeId.HYBRID});
+					break;
+				case 4: gmap = new OpenLayers.Layer.Yahoo("Yahoo Roadmap");
+					break;
+				case 5: gmap = new OpenLayers.Layer.Yahoo("Yahoo Satellite", {type: YAHOO_MAP_SAT});
+					break;
+				case 6: gmap = new OpenLayers.Layer.Yahoo("Yahoo Hybrid", {type: YAHOO_MAP_HYB});
+					break;
+				case 7: gmap = new OpenLayers.Layer.VirtualEarth("Bing Roadmap");
+					break;
+				case 8: gmap = new OpenLayers.Layer.VirtualEarth("Bing Satellite", {type: Msn.VE.MapStyle.Aerial});
+					break;
+				case 9: gmap = new OpenLayers.Layer.VirtualEarth("Bing Hybrid", {type: Msn.VE.MapStyle.Hybrid});
+					break;
+				case 10: gmap = new OpenLayers.Layer.OSM("Open Street Maps");
+					break;
+			}
+            map.addLayer(gmap);
+			map.zoomToExtent(new OpenLayers.Bounds(x0, y0, x1, y1).transform(proj, map.getProjectionObject()));
+			real_bound = map.getExtent().transform(map.getProjectionObject(), proj);
+		}
+		function getRealBounds(){
+			var array = real_bound.toArray();
+			return "(" + array[0] + ", " + array[1] + ", " + array[2] + ", " + array[3] + ")";
+		}
+		</script>
+	</head>
+	<body onload="setSize()">
+		<div id="map"></div>
+	</body>
+</html>

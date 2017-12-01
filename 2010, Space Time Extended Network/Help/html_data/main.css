@@ -1,0 +1,144 @@
+a:link{
+	text-decoration: none;
+	color: #3D3D3D;
+}
+a:visited{
+	text-decoration: none;
+	color: #3D3D3D;
+}
+a:active{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+p{
+	text-decoration: none;
+	font-size: 14px;
+	text-align: justify;
+}
+p.indent{
+	margin-left: 30px;
+}
+body{
+	margin: 0px;
+	font-family: arial, sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	color: #3D3D3D;
+}
+#content{
+	position: absolute;
+	width: 1280px;
+	height: 720px;
+	margin: 0 auto;
+}
+#logo_background{
+	position: absolute;
+	width: 1280px;
+	height: 270px;
+	margin: 0 auto;
+	
+}
+#logo{
+	position: absolute;
+	width: 447px;
+	height: 156px;
+	background: url('../html_data/i2_logo.png');
+	background-repeat: no-repeat;
+	margin: 57px auto auto 55px;
+}
+#text{
+	position: absolute;
+	width: 980px;
+	height: 450px;
+	margin: 270px 0px 0px 0px;
+}
+#langs{
+	position: absolute;
+	text-align: right;
+	width: 754px;
+	height: 30px;
+	margin: 57px auto auto 502px;
+}
+#menu_pl{
+	position: absolute;
+	width: 870px;
+	height: 60px;
+	margin: 0px auto auto 55px;
+	visibility: hidden;
+}
+#menu_en{
+	position: absolute;
+	width: 870px;
+	height: 60px;
+	margin: 0px auto auto 55px;
+	visibility: hidden;
+}
+#frame_pl{
+	position: absolute;
+	width: 870px;
+	height: 390px;
+	margin: 60px auto auto 55px;
+	visibility: hidden;
+}
+#main_pl{
+	position: absolute;
+	visibility: hidden;
+}
+#kontakt_pl{
+	position: absolute;
+	visibility: hidden;
+}
+#frame_en{
+	position: absolute;
+	width: 870px;
+	height: 390px;
+	margin: 60px auto auto 55px;
+	visibility: hidden;
+}
+#main_en{
+	position: absolute;
+	visibility: hidden;
+}
+#about_en{
+	position: absolute;
+	visibility: hidden;
+}
+#offer_en{
+	position: absolute;
+	visibility: hidden;
+}
+#contact_en{
+	position: absolute;
+	visibility: hidden;
+}
+#products_en{
+	position: absolute;
+	visibility: hidden;
+}
+#contact_background{
+	position: absolute;
+	width: 300px;
+	height: 450px;
+	margin: 270px 0px 0px 980px;
+}
+#contact{
+	position: absolute;
+	width: 252px;
+	height: 89px;
+	background: url('../html_data/i2_contact.png');
+	background-repeat: no-repeat;
+	margin: 337px auto auto 24px;
+}
+#link_maplayer{
+	position: absolute;
+	width: 219px;
+	height: 251px;
+	background: url('../html_data/i2_maplayer.png');
+	background-repeat: no-repeat;
+	margin: 0px auto auto 120px;
+}
+.i2_green{
+	color: #CACF43;
+}

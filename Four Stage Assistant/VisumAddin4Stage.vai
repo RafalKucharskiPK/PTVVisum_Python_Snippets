@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<VisumAddInCollection Format="1.0.0">
+		<VisumAddIn>
+			<AddInID>4stage</AddInID>
+			<AddInName>Four stage assistant</AddInName>			
+			<AddInPath>intelligent-infrastructure</AddInPath>
+			<AddInParaDlgScript></AddInParaDlgScript>
+			<AddInBodyScript>4stageassist.py</AddInBodyScript>
+			<AddInOperation>true</AddInOperation>
+			<AddInAutoMenu>true</AddInAutoMenu>
+			<AddInAutoShowPara>true</AddInAutoShowPara>
+		</VisumAddIn>
+</VisumAddInCollection>

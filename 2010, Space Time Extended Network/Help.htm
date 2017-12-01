@@ -1,0 +1,127 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>MapFormers Add-In by intelligent-infrastructure</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-style:italic;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	background:navy;
+	font-size:12.0pt;
+	font-family:"Tahoma","sans-serif";}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=DE>
+
+<div class=WordSection1>
+
+<h1><span lang=EN-GB>Map Formers Add-In by intelligent-infrastructure</span></h1>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This add-in allows you to geolocate your network in 
+case it was created without any geographic reference. 
+Result is WGS-84 geolocated network with appropriate georeference.</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<h2><span lang=EN-GB>Method</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>This add-in will ask You for reference nodes. 
+The more nodes You will reference the better results you will get.
+For each of them You need to point it exact location on the map. 
+The more precisely You will specify node locations the better results you will get.
+   </span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>First select node number and it will be shown with specified zoom. 
+Then find locate this node on one of several layers available on the right. 
+When you are sure you have clicked the exact position click "Save reference" button.
+Repeat procedure for as many nodes as possible. </span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>If node references are collected press "Next" button.
+You can choose one of three available options. 
+First one is appropriate for networks where scale for x axis and scale for y axis are equal. This case is unlikely in most cases. But it provides the most straightforward solution.
+Second option is appropriate for most cases. By means of linear regression it chooses the most coherent subset from referenced nodes and adjusts the network. 
+You can specify the confidence factor for references (default 0.8).
+Third option is appropriate for adjusting acitve part of network. It doesnt adjust the scale, it only moves the network based on reference node, which number is to be specifed with box on the right </span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<h2><span lang=EN-GB>Parameters and Usage</span></h2>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>Start with selecting node references. 
+Then choose calculation method. 
+Important: Calculation works only for active nodes. 
+You should specify the filter, so that appropriate refernce nodes are active. 
+We did it because auto filter selction would confuse users.
+</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB><img width=428 height=223
+src="Help-Dateien/image001.jpg"></span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>For better results repeat the procedure several times for different nodes.
+Whe the procedure is finished projection is set for WGS'84 (Mind that lengths are now in degree's not in meters!, set Mercator projection for proper lengths)</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-GB>
+<p class=MsoNormal><span lang=EN-GB>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

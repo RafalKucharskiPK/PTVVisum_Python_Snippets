@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+	<head>
+		<meta charset="UTF-8" />
+		<title>intelligent infrastructure</title>
+		<link rel="stylesheet" type="text/css" href="html_data/main.css" />
+		<script type="text/javascript" src="html_data/main.js"></script>
+	</head>
+	<body onload="initMain()">
+	<div id="content">
+		<div id="logo_background">
+			<div id="logo">
+			</div>
+			<div id="langs">
+				<a href="#" onclick="switchLanguage('en', 'pl')" id="link_en">help </a>
+				&nbsp;
+				<a href="#" onclick="switchLanguage('pl', 'en')" id="link_pl">file</a>
+			</div>
+		</div>
+		<div id="text">
+			<div id="menu_pl">
+				<a href="#" onclick="switchMenuDivs('main', 'main_pl')" id="link_main_pl"></a>
+				&nbsp;
+				<a href="#" onclick="switchMenuDivs('main', 'kontakt_pl')" id="link_kontakt_pl">kontakt</a>
+			</div>
+			<div id="menu_en">
+				<a href="#" onclick="switchMenuDivs('main', 'main_en')" id="link_main_en">MapFormers </a> Visum Add-In
+				
+				
+			</div>
+			<div id="frame_pl">
+				<div id="main_pl">					
+				</div>
+				<div id="kontakt_pl">					
+				</div>
+			</div>
+			<div id="frame_en">
+				<div id="main_en">
+					<p>
+						<b>Map Formers Add-In</b>					
+					</p>
+					<p>
+						This add-in allows you to geolocate your network in case it was created without any geographic reference. 
+						Result is <span class="i2_green">WGS-84</span> geolocated network with appropriate georeference.
+					</p>
+					<p>
+						<b>Method</b>					
+					</p>
+					<p>
+						This add-in will ask You for reference nodes. 
+						The more nodes You will reference the better results you will get.
+						For each of them You need to point it exact location on the map.
+						The more precisely You will specify node locations the better results you will get.
+					</p>
+					<p>
+						This add-in will ask You for reference nodes. 
+						The more nodes You will reference the better results you will get.
+						For each of them You need to point it exact location on the map.
+						The more precisely You will specify node locations the better results you will get.
+					</p>
+					<p>
+						First select node number and it will be shown with specified zoom. 
+						Then find locate this node on one of several layers available on the right. 
+						When you are sure you have clicked the exact position click "Save reference" button.
+						Repeat procedure for as many nodes as possible.
+					</p>
+					<p>
+						If node references are collected press <span class="i2_green">Next</span> button.
+						You can choose one of three available options. 
+						First one is appropriate for networks where scale for x axis and scale for y axis are equal. This case is unlikely in most cases. But it provides the most straightforward solution.
+						Second option is appropriate for most cases. By means of linear regression it chooses the most coherent subset from referenced nodes and adjusts the network. 
+						You can specify the confidence factor for references (default 0.8).
+						Third option is appropriate for adjusting acitve part of network. It doesnt adjust the scale, it only moves the network based on reference node, which number is to be specifed with box on the right
+					</p>
+
+				</div>		
+				
+				
+			</div>
+		</div>
+		<div id="contact_background">
+			<a href="mailto:info@intelligent-infrastructure.eu">			
+			<div id="contact">
+			</div>
+			</a>
+		</div>
+	</div>
+	</body>
+</html>
